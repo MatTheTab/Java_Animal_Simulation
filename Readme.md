@@ -1,7 +1,7 @@
 # Java Project - Animal Simulation
 
 This program is meant to be a simplified simulation of the natural cycle of life if animals living in the savanna. Predators can eat prey and prey can try to escape but
-not every predator can hunt every type of prey. Animals get tired and require food and water, as well as rest. The behaviour of animals is simulated concurently. <br>
+not every predator can hunt every type of prey. Animals get tired and require food and water, as well as rest. The behaviour of animals is simulated concurrently. <br>
 
 <b> Warning: </b> <br>
 Due to relative path provided in the code, ilustrations of animals and places may not be visible if program is not opened correctly. If you wish to run the program locally, then please, open the folder "Animal" in an IDEA, not the whole downloaded project. <br>
