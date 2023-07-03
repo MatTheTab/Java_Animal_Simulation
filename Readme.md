@@ -10,7 +10,7 @@ The "Stop" button on the sidebar deletes all animals without closing the window,
 
 Documentation can be found in the JavaDoc folder, and the code and executable .jar file are located in the Animal folder. Illustrations for the program, created in pixel art style, are also included. Do not remove any code or the .jar file from the folder, as it will cause the program to be unable to locate the illustrations.
 
-<b>Additional Notes:<b/> <br>
+<b>Additional Notes:</b> <br>
 
 The map state is randomized and may appear different with each program restart. <br>
 Not every crossing point has a "crossing" object, but paths can still intersect. Crossing objects are easily identifiable with their brown dot illustration and clickable functionality. <br>
