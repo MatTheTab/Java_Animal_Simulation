@@ -1,59 +1,31 @@
-Java Project - Animal Simulation
+# Java Project - Animal Simulation
 
-User's Manual:
+<b>User's Manual:</b> <br>
 
-This is my Java Project for the Object Orineted Programming Classes.
-The program should function according to specifications stated in the project requirements file.
-The user can add an animal by selecting a species from the ComboBox found on the right side of the window.
-We window size should more or less automatically fit to the monitor's size (more or less because the actual size
-is a bit smaller than the screensize, for the window not to get covered by toolbars, etc.). Both Preys and Predators
-should behave as is specified in the requirements. When a mouse hovers over one of the animals or locations
-simplified information about the object is displayed on the sidebar and when an object is clicked on, more extensive
-information is displayed. Please note, that the information displayed is from the time the animal/location 
-was clicked on/hovered over, so it may not be adequete if object's state has changed. Pressing the "Stop" button
-located on the sidebar should delete all the animals without closing the window, so it can be used to reset
-the simulation without turning the program off (stopping the simulation may take a few seconds if there are
-a lot of animals).
+This is a Java project developed for Object-Oriented Programming classes. The program simulates animal behavior based on project requirements. Users can add animals by selecting a species from the ComboBox located on the right side of the window. The window size should automatically adjust to fit the monitor's size. Both preys and predators behave according to the specified requirements.
 
-Documentation can be found in the JavaDoc folder, both code and executable .jar file can be found in the Animal
-folder, alongside ilustrations for the program created in pixelart style by me. Please, do not remove either code
-or .jar file from the folder, as it will cause the program to be unable to locate ilustartions and you won't
-be able to see anything besides paths!
+When the mouse hovers over an animal or location, simplified information about the object is displayed on the sidebar. Clicking on an object provides more extensive information. Please note that the displayed information reflects the state of the object at the time of interaction and may not be up-to-date.
 
-Additional Notes:
-- Map state is random, can look different upon every restart of the program
-- As per agreement due to the probabilistic nature of the map, not every time two roads cross is 
-"crossing" object created. Sometimes there are two paths that cross but are not synchronized. 
-Differentiating betwen them is easy thanks to crossing objects having a brown dot as their illustartion and
-being clickable. The "in universe" explonation to that, is the fact that the environment is very
-chaotic and damaged, causing change in elevation (mountains, fallen over trees as brides, canyons, 
-borrows in the ground, etc.)
-- It may seem like a lot of animals are present in a Place even when a maximal capacity is reached, however
-this is caused by the fact that animals will stop just before a location to check if they can enter and if they
-cannot, they will wait. This sometimes causes Prey to stop just a few pixels away from location coordinates, 
-giving illusion that they entered when they did not. To monitor actual number of animals in a location,
-please look at the information displayed when a location is hovered over by a cursor.
-- Dead Prey leaves bones behind, which should disappear after a while
-- Predator's portrait will change when attacking/resting/walking
-- The Predator has 2 states hunting or resting displayed in the Dialog Window
-- If the Predator failes a hunt, they have to rest for a little while to give the Prey a fair chance at escaping
-- If the Predator succeeds in a hunt, they enter a relaxation state lasting as long as is determined by 
-an individual predator's max_relax_state variable
-- Both reproduction and thirst level/food_level is probabilistic, meaning that for every few miliseconds
-there is a chance that animal will become a bit more hungry/thirsty but it is not guaranteed (animals
-don't become hungry/thirsty when waiting) and similarly
-whether an animal will reproduce inside a hideout is also probabilistic
-- Every WaterSource and Plant (FoodSource) has a certain material that can be depeleted, if that happens,
-the animals have to wait for the consumable material to recharge, the recharge rate is proportional
-to number of animals on the map, but it works on integers, so the rate only increases by multiplier of one
-for every 10 animals on the map (can be adjusted through hyperparameters). The rate at which Prey gets
-fed is also proportional to number of animals on the map in similar way (multiply of one per 10 animals).
-- It can be hard to see the current occupation of animals on a crossroad due to them
-being there very shortly, but their behaviour is synchronized and they will not enter a crossing
-simulatniously as can be seen when for a large number of animals, clusters (traffic jams) occur near crossings.
-- Prey may not always go to the target through the most optimal path, their behavior is a combination of greedy and
-probabilistic behaviour so when you set a target to Prey, you may be forced to wait for a little while
-before they reach the target.
-- A lot of hyperparameters for the program's behaviours can be easily adjusted by using the Constants class
-and changing a value of the corresponding variable, although doing things like changing number of hideouts to 100
-may cause some errors
+The "Stop" button on the sidebar deletes all animals without closing the window, allowing you to reset the simulation without turning off the program. Please be aware that stopping the simulation may take a few seconds if there are many animals.
+
+Documentation can be found in the JavaDoc folder, and the code and executable .jar file are located in the Animal folder. Illustrations for the program, created in pixel art style, are also included. Do not remove any code or the .jar file from the folder, as it will cause the program to be unable to locate the illustrations.
+
+<b>Additional Notes:<b/> <br>
+
+The map state is randomized and may appear different with each program restart. <br>
+Not every crossing point has a "crossing" object, but paths can still intersect. Crossing objects are easily identifiable with their brown dot illustration and clickable functionality. <br>
+The number of animals in a location may appear higher than the maximal capacity due to animals stopping just before entering. <br>
+Dead prey leaves bones behind, which disappear after a while. <br>
+Predator's portrait changes based on their activity (attacking, resting, walking). <br>
+Predators have two states: hunting or resting, displayed in the Dialog Window. <br>
+If a predator fails a hunt, they rest for a while to give the prey a fair chance to escape. <br>
+If a predator succeeds in a hunt, they enter a relaxation state for a duration determined by their individual max_relax_state variable. <br>
+Reproduction, thirst level, and food level are probabilistic. Animals become more hungry/thirsty over time, and reproduction inside a hideout is also probabilistic. <br>
+Water sources and food sources have depletable materials. When depleted, animals have to wait for the materials to recharge. <br>
+The rate of recharge and feeding depends on the number of animals on the map. <br>
+The occupation of animals at a crossroad may be difficult to observe due to their short stay, but their behavior is synchronized. <br>
+Prey may not always follow the most optimal path to the target. Their behavior combines greediness and probability. <br>
+Adjustments to program behavior can be made through the Constants class, which contains various hyperparameters. <br>
+Please note that changing certain hyperparameters drastically may lead to errors. <br>
+
+<b>Feel free to explore the program and enjoy the animal simulation!<b/>
